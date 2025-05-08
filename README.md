@@ -45,6 +45,10 @@ This project is a comprehensive, role-based hospital database system built using
 - Integrate appointment scheduling calendar
 - Add patient login and digital health records interface
 
+## 📝 Hospital ERD
+
+![Hospital ERD](docs/Hospital_ERD.PNG)
+
 
 ## 🤝 Contributing
 Contributions are welcome! If you’d like to improve this project or add features:
