@@ -38,7 +38,7 @@ This project includes production-style backup automation using PowerShell and th
 | `DiffBackup_HospitalDB.ps1` | Creates a differential backup after the full         
 
 🧪 Example Usage
-```pwsh
+```powershell
 # Full backup
 ./FullBackup_HospitalDB.ps1
 
@@ -52,6 +52,11 @@ This project includes production-style backup automation using PowerShell and th
 Backups are stored by default in:
 ```
 C:\SQLBackups\HospitalDB
+```
+With readable timestamps like:
+```
+HospitalDB_FULL_2025_05_14_2100.bak
+HospitalDB_DIFF_2025_05_14_2130.bak
 ```
 
 ✅ The scripts will automatically create this folder if it does not exist.
