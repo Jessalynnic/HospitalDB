@@ -51,11 +51,17 @@ VALUES ('Emily', 'Tran', '1985-03-15', 'F', 'Cardiology', '212-555-1010', 'etran
 GO
 
 -- Insert Appointments
-INSERT INTO Appointments (Patient_ID, Doctor_ID, Appointment_date, Visit_reason)
-VALUES (1, 1, '2025-05-10 09:00:00', 'Routine heart checkup'),
-	   (1, 3, '2025-05-12 11:30:00', 'Migraine consultation'),
-	   (2, 4, '2025-05-15 14:00:00', 'Emergency room visit — dizziness'),
-	   (3, 2, '2025-05-20 10:45:00', 'Pediatric follow-up');
+INSERT INTO Appointments (Patient_ID, Doctor_ID, Appointment_date, Visit_reason, Using_insurance)
+VALUES (1, 1, '2025-09-20 09:00', 'Routine heart checkup', 1),
+	   (1, 3, '2025-09-21 11:30', 'Migraine consultation', 1),
+	   (2, 4, '2025-09-22 14:00', 'Follow-up visit', 0),
+	   (4, 1, '2025-09-24 09:00', 'Cardiology checkup', 1),
+	   (6, 5, '2025-09-25 13:30', 'Dermatology visit', 0),
+	   (7, 2, '2025-09-28 10:00', 'Routine checkup', 0),
+	   (8, 1, '2025-09-29 09:30', 'Cardiology consultation', 1),
+	   (10, 3, '2025-10-01 11:15', 'Neurology visit', 0),
+	   (6, 2, '2025-10-02 10:45', 'Pediatrics consultation', 1),
+	   (16, 1, '2025-10-04 13:00', 'Cardiology follow-up', 0);
 GO
 
 -- Insert Patient Allergies
@@ -86,10 +92,16 @@ GO
 
 -- Insert Prescriptions
 INSERT INTO Prescriptions (Patient_ID, Doctor_ID, Medication_ID, Date_prescribed)
-VALUES (1, 1, 1, '2025-05-10'), 
-		(1, 3, 2, '2025-05-12'),
-		(2, 2, 3, '2025-05-15'), 
-		(2, 4, 5, '2025-05-16');
+VALUES (1, 1, 3, '2025-09-20'),
+		(1, 3, 2, '2025-09-21'),
+		(2, 4, 5, '2025-09-22'),
+		(4, 1, 3, '2025-09-24'),
+		(6, 5, 1, '2025-09-25'),
+		(7, 2, 2, '2025-09-28'),
+		(8, 1, 3, '2025-09-29'),
+		(10, 3, 2, '2025-10-01'),
+		(6, 2, 1, '2025-10-02'),
+		(16, 1, 3, '2025-10-04');
 GO
 
 -- Insert Insurance
@@ -156,3 +168,4 @@ SELECT * FROM Users;
 SELECT * FROM Roles;
 
 SELECT * FROM User_Roles;
+
